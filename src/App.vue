@@ -40,7 +40,11 @@
         axios.post("https://to-do-list-vue.firebaseio.com/List.json",{text : this.Text})
         .then(response => {
           console.log(response)
-          location.reload();
+            let data = {
+            text: this.Text,
+            id: response.data.name
+          }
+          this.List.push(data)
         })
         .catch(e => {
           console.log(e)
@@ -51,11 +55,11 @@
         axios.delete("https://to-do-list-vue.firebaseio.com/List/"+id+".json")
         .then(response => {
           console.log(response)
+          for(let i=0; i<this.List.length; i++) if(id == this.List[i].id) this.List.splice(i,1)
         })
         .catch(e => {
           console.log(e)
         })
-        location.reload()
       }
     },
     created(){
