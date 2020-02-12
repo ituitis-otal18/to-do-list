@@ -10,26 +10,11 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-    <script>
-      function menu(tab) {
-        var x = document.getElementById("text-container")
-        var y = document.getElementsByClassName("delete")
-        if(tab == 0){
-          x.style.display = "block"
-          for(i = 0; i < y.length; i++) y[i].style.display = "none"
-        }
-        else if(tab == 1) {
-          x.style.display = "none"
-          for(i = 0; i < y.length; i++) y[i].style.display = "block"
-        }
-      }
-    </script>
 
     <title>To Do List App</title>
   </head>
   
-  <body style="background-color: #282c34">
+  <body style="background-color: #282c34; color: white;">
     <nav class="navbar navbar-expand-sm navbar-dark pl-5" style="background-color: #563d7c">
       <img class="m-2" alt="Logo" src="favicon.ico" height="64" width="64">
       <a class="ml-3 navbar-brand" href="#">
@@ -62,6 +47,14 @@
       </div>
     </nav>
 
-    <div id="app"><!-- my app will be injected here --></div>
+    <div class="forms mt-5 col-md-8 offset-md-2 text-center">
+        <form method="POST" action="/login">
+          <h4>Username :</h4>
+          <input name="comment" type="text" /> <br>
+          <h4>Password :</h4>
+          <input name="password" type="password" /> <br>
+          <input id="submit" value="SEND" type="submit" />
+        </form>
+      </div>
   </body>
 </html>
