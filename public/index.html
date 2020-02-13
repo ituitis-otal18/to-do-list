@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Odibee+Sans&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -23,6 +24,10 @@
           x.style.display = "none"
           for(i = 0; i < y.length; i++) y[i].style.display = "block"
         }
+        else if(tab == 3) {
+          x.style.display = "none"
+          for(i = 0; i < y.length; i++) y[i].style.display = "none"
+        }
       }
     </script>
 
@@ -30,11 +35,11 @@
   </head>
   
   <body style="background-color: #282c34">
-    <nav class="navbar navbar-expand-sm navbar-dark pl-5" style="background-color: #563d7c">
-      <img class="m-2" alt="Logo" src="favicon.ico" height="64" width="64">
-      <a class="ml-3 navbar-brand" href="#">
-        <h1>ListEd </h1>
-        <h6 class="text-muted">Prepare your to do list!</h6>
+    <nav class="navbar navbar-expand-sm navbar-dark pl-5" style="background-color: #563d7c; font-size:x-large; font-family: 'Odibee Sans', cursive;">
+      <img class="m-2" alt="Logo" src="favicon.ico" height="96" width="96">
+      <a class="ml-4 navbar-brand" onclick="menu(3)" href="/">
+        <h1 style="color: turquoise; font-family: 'Fascinate Inline', cursive;">ListEd </h1>
+        <h5 class="text-muted">Prepare your to do list!</h6>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -47,13 +52,13 @@
               <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="./list.svg" alt="list" height="32" width="32"> My List 
               </a>
-              <div class="dropdown-menu ml-auto" aria-labelledby="dropdown03">
-                <a class="dropdown-item" onclick="menu(0)" href="#"><img src="./edit.svg" alt="add" height="32" width="32"> Add to List </a>
-                <a class="dropdown-item" onclick="menu(1)" href="#"><img src="./garbage.svg" alt="delete" height="32" width="32"> Delete from List </a>
+              <div class="dropdown-menu ml-auto" aria-labelledby="dropdown03" style="font-size:large;">
+                <a class="dropdown-item" onclick="menu(0)" href="#"><img src="./edit.svg" alt="add" height="32" width="32">&ensp; Add to List</a>
+                <a class="dropdown-item" onclick="menu(1)" href="#"><img src="./garbage.svg" alt="delete" height="32" width="32">&ensp; Delete from List</a>
               </div>
             </li>
             <li class="nav-item mr-2">
-              <a class="nav-link" href="#"><img src="./user.svg" alt="login" height="32" width="32"> Login <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login"><img src="./user.svg" alt="login" height="32" width="32"> Login <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item mr-2">
               <a class="nav-link" href="#"><img src="./exit.svg" alt="exit" height="32" width="32"> Exit <span class="sr-only">(current)</span></a>

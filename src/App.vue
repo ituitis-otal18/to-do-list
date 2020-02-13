@@ -2,7 +2,7 @@
   <div id="app">
     <div class="row">
       <div class="mt-5 col-md-8 offset-md-2 text-center">
-        <h2>My List:</h2>
+        <h2>My To Do List:</h2>
         
         <div id="text-container">
           <hr>
@@ -83,7 +83,7 @@
 
 <style>
   #app {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: white;
   }
   #text-container {
